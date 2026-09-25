@@ -31,7 +31,7 @@ export const personalInfo = {
   phone: "+91 9119984964",
   location: "Kanpur, Uttar Pradesh, India",
   university: "Rama University, Kanpur",
-  profileImage: "/profile.jpg",
+  profileImage: `${process.env.NEXT_PUBLIC_BASE_PATH || "/ravish-portfolio"}/profile.jpg`,
   heroBadges: ["Power BI", "SQL / MySQL", "Python / Pandas", "AI Tools", "React.js", "Excel"],
 };
 

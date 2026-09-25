@@ -14,8 +14,12 @@ const displayFont = Plus_Jakarta_Sans({
   display: "swap",
 });
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "/ravish-portfolio";
+const domain = "https://ravish9119.github.io";
+const siteUrl = `${domain}${basePath}`;
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ravishkushwaha.dev"),
+  metadataBase: new URL(domain),
   title: "Ravish Kushwaha | Data Analyst & Full Stack Developer",
   description:
     "Ravish Kushwaha — Data Analyst & Full Stack Developer specializing in Power BI, SQL, Python, React, and data visualization.",
@@ -39,14 +43,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://ravishkushwaha.dev",
+    url: siteUrl,
     title: "Ravish Kushwaha | Data Analyst & Full Stack Developer",
     description:
       "Turning messy raw datasets into interactive dashboards, optimized SQL pipelines, and modern web applications.",
     siteName: "Ravish Kushwaha Portfolio",
     images: [
       {
-        url: "/profile.jpg",
+        url: `${basePath}/profile.jpg`,
         width: 800,
         height: 800,
         alt: "Ravish Kushwaha - Data Analyst & Full Stack Developer",
@@ -58,10 +62,10 @@ export const metadata: Metadata = {
     title: "Ravish Kushwaha | Data Analyst & Full Stack Developer",
     description:
       "Data Analyst & Full Stack Developer specializing in Power BI, SQL, Python, React, and modern web solutions.",
-    images: ["/profile.jpg"],
+    images: [`${basePath}/profile.jpg`],
   },
   icons: {
-    icon: "/favicon.svg",
+    icon: `${basePath}/favicon.svg`,
   },
 };
 
